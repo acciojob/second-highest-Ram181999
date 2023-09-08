@@ -10,6 +10,27 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+
+		 let a = arr[0];
+ let b = arr[1];
+
+//now i have two check from index 2 to end and compare
+
+ for (let i = 2; i < arr.length; i++) {
+//   //   //now i have to get min value of 2 variables tpo cpmapre with rest
+//   //   //use terninary for this
+  let currmin = a < b ? a : b;
+//   //   //extract max
+   let currmax = a > b ? a : b;
+//   //   //pick min value and we dont need my curr max to afferct
+ if (currmin < arr[i]) {
+//     //     //i.e means arr[i]is greater to currmin , so i have to upadte my b with arr[i] which i assumw my b (along with a) as greatest
+//     //     //before that i have to update my a with currmax
+   a = currmax;
+   b = arr[i];
+  }
+ }
+console.log(a < b ? a : b);
 			
 		}
 
