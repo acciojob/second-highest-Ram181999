@@ -10,11 +10,21 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-if(arr.length==1 || arr[0]==[]){
+if(arr.length==1 || arr.length==0  ){
 	return -Infinity;
 }
 		 let a = arr[0];
  let b = arr[1];
+			int count=0;
+			
+				for(int j=0 ;j<arr.length;j++){
+					if(a==arr[j]){
+						count++;
+					}
+				}
+			if(count==arr.length){
+				return -Infinity;
+			}
 
 //now i have two check from index 2 to end and compare
 
@@ -37,7 +47,7 @@ if(arr.length==1 || arr[0]==[]){
 		}
 
 		 function Main() {
-			  var n = prompt("Enter the number of elements");
+			  // var n = prompt("Enter the number of elements");
 		n=parseInt(n);
 		var arr = [];
 		for (var i = 0; i < n; i++) {
@@ -45,7 +55,7 @@ if(arr.length==1 || arr[0]==[]){
 			element=parseInt(element);
 			arr[i]=element;
 			}
-		 alert(secondHighest(arr));
+		 // alert(secondHighest(arr));
 		 }
 		Main();
 	</script>
